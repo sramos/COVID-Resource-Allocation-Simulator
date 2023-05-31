@@ -27,7 +27,7 @@ class Agent:
         """
         self.role = role
         self.vaccinated = vaccinated
-        self.infected = !vaccinated && infected
+        self.infected = infected and not vaccinated
         self.transmission_rate = transmission_rate
         self.curr_coord = curr_coord
         self.curr_location = curr_location
