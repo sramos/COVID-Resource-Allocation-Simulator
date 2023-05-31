@@ -8,6 +8,7 @@ class Agent:
     """
     def __init__(self,
                  role,
+                 vaccinated,
                  infected,
                  transmission_rate,
                  curr_coord,
@@ -16,6 +17,7 @@ class Agent:
                  epsilon=0.3):
         """
         role - str, E.g. "patient", "staff"
+        vaccinated - bool
         infected - bool
         transmission_rate - float, [0,1]
         curr_coord - tup, (y,x)
@@ -24,7 +26,8 @@ class Agent:
         epsilon - float, [0,1]
         """
         self.role = role
-        self.infected = infected
+        self.vaccinated = vaccinated
+        self.infected = !vaccinated && infected
         self.transmission_rate = transmission_rate
         self.curr_coord = curr_coord
         self.curr_location = curr_location
@@ -38,7 +41,7 @@ class Agent:
         Returns True if previously uninfected and now infected.
         Returns False if uninfected, or already infected.
         """
-        if not self.infected and random.random() < self.transmission_rate:
+        if not self.vaccinated and not self.infected and random.random() < self.transmission_rate:
             self.infected = True
             return True
         return False
