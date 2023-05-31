@@ -3,6 +3,7 @@ from initialiser import *
 
 # Helper processes
 agent_factory = AgentFactory(creation_rate=0.2,
+                             vaccinated_rate=0.3,
                              infected_rate=0.03,
                              transmission_rate=0.1,
                              journeys=journeys,
