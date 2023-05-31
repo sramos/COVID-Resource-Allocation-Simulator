@@ -31,7 +31,12 @@ def draw_agent(agent, gameDisplay):
     location = agent.curr_location
     pos_y, pos_x = location.position
     coord_y, coord_x = agent.curr_coord
-    color = red if agent.infected else blue
+    if agent.vaccinated:
+        color = green 
+    elif agent.infected:
+        color = red
+    else:
+        color = blue
     pygame.draw.circle(gameDisplay, color, (coord_y*10 + pos_y, coord_x*10 + pos_x), 5)
 
 
