@@ -54,11 +54,13 @@ class Simulation:
                 print(f"{agent.role} "
                       f"from {curr_location.name}{agent.curr_coord} "
                       f"to {next_location.name}{curr_location.get_adj_room_coord(next_location)}, "
+                      f"vaccinated: {agent.vaccinated}, "
                       f"infected: {agent.infected}.")
             else:
                 print(f"{agent.role} "
                       f"from {curr_location.name}{agent.curr_coord} "
                       f"to exit, "
+                      f"vaccinated: {agent.vaccinated}, "
                       f"infected: {agent.infected}.")
 
     def print_statistics(self):
