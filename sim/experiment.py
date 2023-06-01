@@ -11,7 +11,8 @@ experiment_parameters = {
     'time_req_entrance': [10],
     'time_req_pharmacy': [15],
     'time_req_registration': [20],
-    'time_req_waiting_area': [60],
+    #'time_req_waiting_area': [60],
+    'time_req_waiting_area': [0.0+i for i in range(0,151)],
 
     # Size of locations
     'size_entrance_x': [20],
@@ -23,13 +24,15 @@ experiment_parameters = {
     'size_registration_x': [5],
     'size_registration_y': [5],
 
-    'size_waiting_area_x': [10+i for i in range(50)],
+    #'size_waiting_area_x': [10+i for i in range(50)],
+    'size_waiting_area_x': [10],
     'size_waiting_area_y': [10],
 
     # Agent properties
     'creation_rate': [0.1],
     'vaccinated_rate': [0.0],
     'infected_rate': [0.1],
+    #'transmission_rate': [0.0+(i/100.0) for i in range(0,100,5)],
     'transmission_rate': [0.1],
 }
 
