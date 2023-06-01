@@ -155,6 +155,13 @@ class AgentFactory:
             self.agents.append(agent)
             return agent
 
+    def print_info(self):
+        print("==========Agents Info==========")
+        print(f"creation_rate:     {self.creation_rate}")
+        print(f"vaccinated_rate:   {self.vaccinated_rate}")
+        print(f"infected_rate:     {self.infected_rate}")
+        print(f"transmission_rate: {self.transmission_rate}")
+
 
 if __name__ == "__main__":
     entrance = Location("Entrance", size=(10,10))
