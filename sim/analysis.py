@@ -13,7 +13,8 @@ def plot_experiment(factor, filename):
     plt.ylabel("transmissions")
     plt.show()
 
-plot_experiment("transmission_rate", "transmission_rate.csv")
-plot_experiment("time_req_waiting_area", "time_req_waiting_area.csv")
-# plot_experiment("size_waiting_area_x", "size_waiting_area_x.csv")
-# plot_experiment("time_req_pharmacy", "time_req_pharmacy.csv")
+#plot_experiment("transmission_rate", "transmission_rate.csv")
+#plot_experiment("time_req_waiting_area", "time_req_waiting_area.csv")
+#plot_experiment("size_waiting_area_x", "size_waiting_area_x.csv")
+#plot_experiment("time_req_pharmacy", "time_req_pharmacy.csv")
+#plot_experiment("vaccinated_rate", "vaccinated_rate.csv")
