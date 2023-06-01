@@ -28,6 +28,7 @@ experiment_parameters = {
 
     # Agent properties
     'creation_rate': [0.1],
+    'vaccinated_rate': [0.0],
     'infected_rate': [0.1],
     'transmission_rate': [0.1],
 }
@@ -78,6 +79,7 @@ def initialise_experiment(**parameters):
 
     # Agent Creation
     agent_factory = AgentFactory(creation_rate=parameters['creation_rate'],
+                                 vaccinated_rate=parameters['vaccinated_rate'],
                                  infected_rate=parameters['infected_rate'],
                                  transmission_rate=parameters['transmission_rate'],
                                  journeys=journeys,

@@ -169,15 +169,6 @@ class AgentFactory:
         print(f"infected_rate:     {self.infected_rate}")
         print(f"transmission_rate: {self.transmission_rate}")
 
-    def print_info_line(self, statistics):
-        print(f"{self.creation_rate};"
-              f"{self.vaccinated_rate};"
-              f"{self.infected_rate};"
-              f"{self.transmission_rate};"
-              f"{statistics['transmissions']};"
-              f"{statistics['agents']};"
-              f"{statistics['average_transmissions']}")
-
 
 if __name__ == "__main__":
     entrance = Location("Entrance", size=(10,10))
