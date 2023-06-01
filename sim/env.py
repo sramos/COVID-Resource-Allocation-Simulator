@@ -68,6 +68,9 @@ class Simulation:
         for key, value in self.statistics.items():
             print(f"{key}: {value}")
 
+    def get_statistics(self):
+        return self.statistics
+
     def step(self, verbose=False):
         self.t += 1
 
@@ -165,6 +168,13 @@ class AgentFactory:
         print(f"vaccinated_rate:   {self.vaccinated_rate}")
         print(f"infected_rate:     {self.infected_rate}")
         print(f"transmission_rate: {self.transmission_rate}")
+
+    def print_info_line(self, statistics):
+        print(f"{self.creation_rate};"
+              f"{self.vaccinated_rate};"
+              f"{self.infected_rate};"
+              f"{self.transmission_rate};"
+              f"{statistics['average_transmissions']}")
 
 
 if __name__ == "__main__":

@@ -3,8 +3,9 @@ from initialiser import *
 creation_rate = 0.2
 vaccinated_rate = 0.0
 infected_rate=0.03
-transmission_rate = 0.1
+transmission_rate = 0.0
 
+print(f"creation_rate;vaccinated_rate;infected_rate;transmission_rate;average_transmissions")
 while transmission_rate <= 1.0 :
   # Helper processes
   agent_factory = AgentFactory(creation_rate=creation_rate,
@@ -23,6 +24,5 @@ while transmission_rate <= 1.0 :
           renderer=renderer,
           epoch=1000,
           verbose=False)
-  agent_factory.print_info()
-  sim.print_statistics()
+  agent_factory.print_info_line(sim.get_statistics())
   transmission_rate += 0.05
