@@ -5,7 +5,7 @@ vaccinated_rate = 0.0
 infected_rate=0.03
 transmission_rate = 0.0
 
-print(f"creation_rate;vaccinated_rate;infected_rate;transmission_rate;average_transmissions")
+print(f"creation_rate;vaccinated_rate;infected_rate;transmission_rate;transmissions;agents;average_transmissions")
 while transmission_rate <= 1.0 :
   # Helper processes
   agent_factory = AgentFactory(creation_rate=creation_rate,

@@ -174,6 +174,8 @@ class AgentFactory:
               f"{self.vaccinated_rate};"
               f"{self.infected_rate};"
               f"{self.transmission_rate};"
+              f"{statistics['transmissions']};"
+              f"{statistics['agents']};"
               f"{statistics['average_transmissions']}")
 
 
