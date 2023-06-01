@@ -21,7 +21,7 @@ while transmission_rate <= 1.0 :
   sim = Simulation(location=entrance, agents=[])
   sim.run(agent_factory=agent_factory,
           renderer=renderer,
-          epoch=10,
+          epoch=1000,
           verbose=False)
   agent_factory.print_info()
   sim.print_statistics()

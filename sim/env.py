@@ -103,7 +103,11 @@ class Simulation:
             self.print_state()
 
     def compute_statistics(self):
-        self.statistics['average_transmissions'] = self.statistics['transmissions']/self.statistics['agents']
+        average = self.statistics['agents']
+        if average > 0 :
+          self.statistics['average_transmissions'] = self.statistics['transmissions']/average
+        else :
+          self.statistics['average_transmissions'] = 0.0 
 
     def run(self, agent_factory, epoch=50, renderer=None, verbose=False):
         # Render environment
